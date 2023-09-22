@@ -2,14 +2,13 @@
  * 2-print_alphabet.c
  * Brandon M. waz here
  */
-#include 'main.h'
+
 #include "main.h"
 /**
 *print_alphabet - function that print alphabet
-*it prints it in lowercase
+*it prints in lowercase
+*Return: no return
 */
-
-
 void print_alphabet(void)
 {
 int letter;
