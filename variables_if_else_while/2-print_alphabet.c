@@ -1,11 +1,6 @@
-/*
- * 2-print_alphabet.c
- * Brandon M. waz here
- */
-
 #include "main.h"
 /**
-*print_alphabet - function that print alphabet
+*print_alphabet - a function that will print the alphabet
 *it prints in lowercase
 *Return: no return
 */
