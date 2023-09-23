@@ -2,12 +2,16 @@
 #include <time.h>
 #include <stdio.h>
 
+/*
+ * 1-last_digit.c
+ * Brandon M. waz here
+ * I like metal
+ */
+
 /**
- * main - Check to see if it is a number.
- * void: Null value
- *
- * Description: Print the number if it is positive, negative or a zero
- * Return: the zero value
+ * main - will print the last digit of n and prints out whether it is
+ * greater than 5, 0, or less than 6
+ * Return: 0
  */
 
 int main(void)
@@ -16,17 +20,12 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	if (n > 0)
-	{
-		printf("%d is positive\n", n);
-	}
-	else if (n < 0)
-	{
-		printf("%d is negative\n", n);
-	}
-	else
-	{
-		printf("%d is zero\n", n);
-	}
+	printf("Last digit of %d is %d ", n, n % 10);
+	if (n % 10 > 5)
+		printf("and is greater than 5\n");
+	else if (n % 10 == 0)
+		printf("and is 0\n");
+	else if (n % 10 < 6 && n % 10 != 0)
+		printf("and is less than 6 and not 0\n");
 	return (0);
 }
