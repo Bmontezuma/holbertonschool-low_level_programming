@@ -1,3 +1,3 @@
-#ifndef NAME
-#define NAME
+#ifndef putchar
+#define putchar
 #endif
