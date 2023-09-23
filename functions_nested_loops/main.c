@@ -1,3 +1,3 @@
-#ifndef putchar
-#define putchar
+#ifndef "_putchar"
+#define "_putchar"
 #endif

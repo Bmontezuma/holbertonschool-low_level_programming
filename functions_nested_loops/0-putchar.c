@@ -1,4 +1,4 @@
-#cat 0 - main.c
+#include "_putchar"
 #include "main.h"
 
 /*
