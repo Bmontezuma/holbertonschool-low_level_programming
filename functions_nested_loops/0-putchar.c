@@ -1,5 +1,6 @@
-#include "_putchar"
 #include "main.h"
+
+int _putchar.c
 
 /*
  * Brandon WAZ here!
