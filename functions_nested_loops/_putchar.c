@@ -1,10 +1,16 @@
-#include <unistd.h>
 #include "main.h"
+#include <unistd.h>
 
-int _putchar(char c0
+/**
+ * _putchar - write single character to standard output stream
+ * @c: single argument output to be written
+ * Return: On success, 1. On error, -1 is returned
+ */
+
+int _putchar(char c)
 
 {
-	return(write(1, &c, 1));
+	return (write(1, &c, 1));
 	}
 
 
