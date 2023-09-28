@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * print_most_numbers - Prints numbers 0-9 (not 2 and 4) followed by new line.
  */
@@ -12,10 +12,10 @@ void print_most_numbers(void)
 		if (digit != '2' && digit != '4')
 		{
 
-	  _putchar(digit);
+	  putchar(digit);
 		}
 		digit++;
 	}
 
-	_putchar('\n');
+	putchar('\n');
 }
