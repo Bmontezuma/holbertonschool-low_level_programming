@@ -1,33 +1,26 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
- * print_triangle - Prints a triangle of '#' characters.
- * @size: The size of the triangle.
+ * print_line - Draws a straight line on the terminal.
+ * @n: The number of times the character '_' should be printed.
  *
- * If size is 0 or less, the function prints only a new line.
+ * If n is 0 or less, the function should only print '\n'.
  */
-void print_triangle(int size)
+void print_line(int n)
 {
-	if (size <= 0)
+	if (n <= 0)
 	{
 		putchar('\n');
 	}
 	else
 	{
-		int row, col;
+		int i;
 
-		for (row = 0; row < size; row++)
+		for (i = 0; i < n; i++)
 		{
-			for (col = 0; col < size - row - 1; col++)
-			{
-				putchar(' ');
-			}
-			for (col = 0; col <= row; col++)
-			{
-				putchar('#');
-			}
-			putchar('\n');
+			putchar('_');
 		}
+		putchar('\n');
 	}
 }
 
