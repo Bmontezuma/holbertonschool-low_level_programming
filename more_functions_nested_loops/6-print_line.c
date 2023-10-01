@@ -1,20 +1,18 @@
 #include "main.h"
 #include <stdio.h>
-
 /**
- * print_line - Prints a line of underscores n times followed by a newline.
- *
- * @n: The number of times the line of underscores should be printed.
+ * print_line - Writes the line n amount of times
+ * @n: the number of lines we should print
  */
+
 void print_line(int n)
 {
 	int i = 0;
 
 	while (i < n)
 	{
-		putchar('_');  /* Print an underscore character */
+		putchar('_');
 		i++;
 	}
-	putchar('\n'); /* Print a newline character */
+	putchar('\n');
 }
-
