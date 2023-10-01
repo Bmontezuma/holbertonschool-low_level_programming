@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * _strcpy - Copy a string from src to dest
  * @dest: The destination buffer
@@ -20,3 +22,4 @@ char *_strcpy(char *dest, char *src)
 
 	return (original_dest);
 }
+
