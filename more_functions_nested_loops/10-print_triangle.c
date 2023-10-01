@@ -4,7 +4,6 @@
 /**
  * print_triangle - Prints a triangle of '#' characters.
  * @size: The size of the triangle.
- *
  * If size is 0 or less, the function prints only a new line.
  */
 void print_triangle(int size)
