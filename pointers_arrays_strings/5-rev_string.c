@@ -1,27 +1,34 @@
 #include "main.h"
-#include "stdio.h"
+#include <stdio.h>
 
 /**
- * more_numbers - prints numbers from 0 to 14, ten times.
+ * rev_string - Reverses a string in place.
  *
- * Description: This function prints numbers from 0 to 14, ten times,
- * separated by newlines.
+ * @s: Pointer to the string to be reversed.
  */
-void more_numbers(void)
+void rev_string(char *s)
 {
-int number1, number2;
+int a, len;
+char *begin, *end = s;
 
-for (number1 = 0; number1 < 10; number1++)
+for (a = 0; s[a] != '\0' && s[a + 1] != '\0'; a++)
 {
-for (number2 = 0; number2 <= 14; number2++)
+end++;
+}
+len = a + 1;
+
+begin = s;
+
+for (a = 0; a < len / 2; a++)
 {
-if (number2 > 9)
-{
-putchar((number2 / 10) + '0');
+char x;
+x = *end;
+*end = *begin;
+*begin = x;
+begin++;
+end--;
 }
-putchar((number2 % 10) + '0');
-}
-putchar(10);
-}
+
+end[1] = '\0';
 }
 
