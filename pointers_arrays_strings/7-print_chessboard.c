@@ -3,23 +3,18 @@
 
 /**
  * print_chessboard - Prints a chessboard.
- * @board: The 2D array representing the chessboard.
- *
- * Description: This function takes a 2D array representing a chessboard and
- * prints it to the console, separating each piece with a space and each row
- * with a newline character.
+ * @a: Pointer to a 2D array representing the chessboard.
  */
-void print_chessboard(char board[8][8])
+void print_chessboard(char (*a)[8])
 {
-	int row, col;
+int i, j;
 
-	for (row = 0; row < 8; row++)
-	{
-		for (col = 0; col < 8; col++)
-		{
-			putchar(board[row][col]);
-			putchar(' ');
-		}
-		putchar('\n');
-	}
+for (i = 0; i < 8; i++)
+{
+for (j = 0; j < 8; j++)
+{
+putchar(a[i][j]);
+}
+putchar('\n');
+}
 }
