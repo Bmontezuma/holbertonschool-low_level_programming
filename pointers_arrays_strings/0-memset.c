@@ -1,26 +1,23 @@
 #include "main.h"
-#include <string.h>
 #include <stdio.h>
 /**
- * main - Entry point of the program
- * Description: This program tests the _memset function by filling
- * a portion of a character array with a constant byte.
- * Return: Always 0 (Success)
+ * _memset - Fills memory with a constant byte.
+ * @s: Pointer to the memory area to be filled.
+ * @b: The constant byte to fill the memory with.
+ * @n: Number of bytes to be filled.
+ *
+ * Return: A pointer to the memory area s.
  */
-int main(void)
+char *_memset(char *s, char b, unsigned int n)
+
 {
-	char buffer[20] = "Hello, World!";
-	char fill_char = 'X';
-	unsigned int n = 5;
+char *ptr = s;
+unsigned int i;
 
-	memset(buffer, fill_char, n);
-
-	for (int i = 0; i < 20; i++)
-	{
-		putchar(buffer[i]);
-	}
-	putchar('\n');
-
-	return (0);
+for (i = 0; i < n; i++)
+{
+*ptr++ = b;
 }
 
+return (s);
+}
