@@ -20,14 +20,16 @@ int main(int argc, char *argv[])
 	for (int i = 1; i < argc; i++)
 	{
 		char *arg = argv[i];
+		int j = 0;
 
-		for (int j = 0; arg[j]; j++)
+		while (arg[j])
 		{
 			if (arg[j] < '0' || arg[j] > '9')
 			{
 				printf("Error\n");
 				return (1);
 			}
+			j++;
 		}
 
 		sum += atoi(arg);
@@ -36,3 +38,4 @@ int main(int argc, char *argv[])
 	printf("%d\n", sum);
 	return (0);
 }
+
