@@ -1,63 +1,44 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * is_prime_helper - A helper function that recursively checks if a number is prime.
- * @n: The number to be checked for primality.
- * @divisor: The current divisor being tested.
+ * is_prime_recursive - Helper function to check for prime.
+ * @n: The number to check for primality.
+ * @divisor: The current divisor to check.
  *
- * Return: 1 if the number is prime, 0 otherwise.
+ * Return: 1 if 'n' is prime, 0 if not.
  */
-int is_prime_helper(int n, int divisor)
-{
-    if (n <= 1) {
-        return (0);
-    }
-    if (divisor == 1) {
-        return (1);
-    }
-    
-    if (n % divisor == 0) {
-        return (0);
-    }
-    
-    return is_prime_helper(n, divisor - 1);
-}
+int is_prime_recursive(int n, int divisor);
 
 /**
  * is_prime_number - Check if an input integer is a prime number.
- * @n: The integer to be checked.
+ * @n: The integer to check for primality.
  *
- * Return: 1 if the number is prime, 0 otherwise.
+ * Return: 1 if 'n' is prime, 0 if not.
  */
 int is_prime_number(int n)
 {
-    if (n < 2) {
-        return (0);
-    }
-    
-    return is_prime_helper(n, n - 1);
+	if (n <= 1)
+		return (0);
+	if (n == 2)
+		return (1);
+
+	return (is_prime_recursive(n, 2));
 }
 
-int main(void)
+/**
+ * is_prime_recursive - Helper function to recursively check for primality.
+ * @n: The number to check for primality.
+ * @divisor: The current divisor to check.
+ *
+ * Return: 1 if 'n' is prime, 0 if not.
+ */
+int is_prime_recursive(int n, int divisor)
 {
-    int r;
+	if (divisor * divisor > n)
+		return (1);
+	if (n % divisor == 0)
+		return (0);
 
-    r = is_prime_number(1);
-    printf("%d\n", r);
-    r = is_prime_number(1024);
-    printf("%d\n", r);
-    r = is_prime_number(16);
-    printf("%d\n", r);
-    r = is_prime_number(17);
-    printf("%d\n", r);
-    r = is_prime_number(25);
-    printf("%d\n", r);
-    r = is_prime_number(-1);
-    printf("%d\n", r);
-    r = is_prime_number(113);
-    printf("%d\n", r);
-    r = is_prime_number(7919);
-    printf("%d\n", r);
-    return (0);
+	return (is_prime_recursive(n, divisor + 1));
 }
 
