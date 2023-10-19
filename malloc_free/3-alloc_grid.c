@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdlib.h>
 
 /**
@@ -21,8 +22,7 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	}
 
-	int i;
-	int j;
+	int i, j;
 
 	for (i = 0; i < height; i++)
 	{
