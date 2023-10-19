@@ -2,25 +2,21 @@
 #include <stdlib.h>
 
 /**
- * free_grid - Frees a 2D grid previously allocated by alloc_grid.
- * @grid: Pointer to the 2D grid.
- * @height: Height of the grid.
+ * releaseGrid - Deallocates memory used by a 2D grid.
+ * @grid: The 2D array of integers.
+ * @height: The height of the grid.
+ *
+ * This function frees the memory allocated for the grid and its rows.
  */
-void free_grid(int **grid, int height)
+void releaseGrid(int **grid, int height)
 {
-if (grid == NULL || height <= 0)
-return;
-
-int i;
-for (i = 0; i < height; i++)
+if (grid != NULL && height > 0)
 {
-if (grid[i] != NULL)
+for (int row = 0; row < height; row++)
 {
-free(grid[i]);
-grid[i] = NULL;
+free(grid[row]);
 }
-}
-
 free(grid);
+}
 }
 
