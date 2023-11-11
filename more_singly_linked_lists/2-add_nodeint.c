@@ -1,5 +1,6 @@
 #include "lists.h"
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * add_nodeint - Adds a new node at the beginning of listint_t
  * @head: Pointer to the pointer of the head
@@ -8,30 +9,18 @@
  * Return: The address of the new element, or NULL
  */
 
-size_t print_listint(const listint_t *h);
-
-int main(void)
+listint_t *add_nodeint(listint_t **head, const int n)
 {
-listint_t *head = NULL;
+listint_t *new_node;
 
-add_nodeint(&head, 6);
-add_nodeint(&head, -12);
+new_node = malloc(sizeof(listint_t));
+if (new_node == NULL)
+return (NULL);
 
-print_listint(head);
+new_node->n = n;
+new_node->next = *head;
 
-return (0);
-}
+*head = new_node;
 
-size_t print_listint(const listint_t *h)
-{
-size_t node_count = 0;
-
-while (h != NULL)
-{
-printf("%d\n", h->n);
-h = h->next;
-node_count++;
-}
-
-return (node_count);
+return (new_node);
 }
