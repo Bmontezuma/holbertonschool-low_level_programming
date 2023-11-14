@@ -6,38 +6,33 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
-
-int main(int ac, char **av)
+int main(void)
 {
-int f1, f2, r, w, c;
-char buffer[1024] = {0};
+int fd_from, fd_to, read_status, write_status, close_status;
+char buffer[1024];
+const char *file_from = "test_folder/textfile_0";
+const char *file_to = "test_folder/textfile_0_copy_3";
 
-if (ac != 3)
-{
-dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", *av);
-return (EXIT_FAILURE);
-}
+fd_from = open(file_from, O_RDONLY);
+fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
 
-f1 = open(av[1], O_RDONLY);
-f2 = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0644);
-
-if (ac != 3 || f1 == -1 || f2 == -1)
+if (fd_from == -1 || fd_to == -1)
 {
 perror("Error");
-return (EXIT_FAILURE);
+return (1);
 }
 
-while ((r = read(f1, buffer, 1024)) > 0 &&
-(w = write(f2, buffer, r)) == r);
+while ((read_status = read(fd_from, buffer, sizeof(buffer))) > 0 &&
+(write_status = write(fd_to, buffer, read_status)) == read_status);
 
-c = close(f1) | close(f2);
+close_status = close(fd_from) | close(fd_to);
 
-if (c == -1)
+if (close_status == -1)
 {
 perror("Error");
-return (EXIT_FAILURE);
+return (1);
 }
 
-return (EXIT_SUCCESS);
+return (0);
 }
 
