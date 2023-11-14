@@ -1,11 +1,10 @@
-![Lilth](https://64.media.tumblr.com/1a5e6cbbfd8ff3b618d29c974082b237/e18d4455d03e3ddf-49/s500x750/d192788bb110ad0b863998b174fa4b3770b6e084.gifv)
+![Lilth](https://66.media.tumblr.com/a5ba974b0cdd9beb3dcfa077f2a33c94/tumblr_ppdn3daf0A1y9q8bdo1_500.gif)
 
-#AUTHOR
-
+##AUTHOR
 [@Bmontezuma](https://github.com/Bmontezuma)
 ### Connect with Me
 
-[![Twitter](https://img.shields.io/twitter/follow/@BMontezuma01?style=social)](https://twitter.com/BMontezuma01)
+[![Twitter](https://img.shields.io/twitter/follow/BMontezuma01?style=social)](https://twitter.com/BMontezuma01)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-YourName-blue)](https://www.linkedin.com/feed/)
 
 
