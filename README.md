@@ -3,15 +3,16 @@
 
 AUTHOR
 [@Bmontezuma](https://github.com/Bmontezuma)
-<SKILLS>
-  <summary>Click to expand</summary>
-  
-  UNREAL ENGINE 5
-  UNITY
-  BLENDER 	
-  GITHUB
-  MAYA
-  GAEA 
+<details>
+  <summary>Skills</summary>
+
+  - Unreal Engine 5.3
+  - Unity
+  - Blender
+  - Gaea
+  - Maya
+	
+
 </details>
 
 ### Connect with Me
