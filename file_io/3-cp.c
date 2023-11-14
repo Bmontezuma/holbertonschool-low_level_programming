@@ -5,10 +5,12 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-int main(int ac, char **av)
 
+
+int main(int ac, char **av)
 {
 int f1, f2, r, w, c;
+char buffer[1024] = {0};
 
 if (ac != 3)
 {
@@ -25,8 +27,8 @@ perror("Error");
 return (EXIT_FAILURE);
 }
 
-while ((r = read(f1, (char[1024]){0}, 1024)) > 0 &&
-(w = write(f2, (char[1024]){0}, r)) == r);
+while ((r = read(f1, buffer, 1024)) > 0 &&
+(w = write(f2, buffer, r)) == r);
 
 c = close(f1) | close(f2);
 
