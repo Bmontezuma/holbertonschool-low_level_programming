@@ -1,2 +1,7 @@
-# 
-![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
+#AUTHORS
+
+[@Bmontezuma](https://github.com/Bmontezuma)
+
+# HOLBERTON LOW LEVEL PROGRAMMING
+
+A group of directories for projects in the main directory of HOLBERTON LOW LEVEL PROGRAMMING.
