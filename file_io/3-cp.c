@@ -6,39 +6,37 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
-#include "main.h"
-
-int main(int ac, char **av)
+int main(int argc, char *argv[])
 {
-int f1, f2, r, w, c;
-char buffer[1024] = {0};
+int fd_from, fd_to, read_status, write_status, close_status;
+char buffer[1024];
 
-if (ac != 3)
+if (argc != 3)
 {
-dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", *av);
-return (EXIT_FAILURE);
+dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", argv[0]);
+return (97);
 }
 
-f1 = open(av[1], O_RDONLY);
-f2 = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0644);
+fd_from = open(argv[1], O_RDONLY);
+fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
 
-if (ac != 3 || f1 == -1 || f2 == -1)
+if (fd_from == -1 || fd_to == -1)
 {
 perror("Error");
-return (EXIT_FAILURE);
+return (99);
 }
 
-while ((r = read(f1, buffer, 1024)) > 0 &&
-(w = write(f2, buffer, r)) == r);
+while ((read_status = read(fd_from, buffer, sizeof(buffer))) > 0 &&
+(write_status = write(fd_to, buffer, read_status)) == read_status);
 
-c = close(f1) | close(f2);
+close_status = close(fd_from) | close(fd_to);
 
-if (c == -1)
+if (close_status == -1)
 {
 perror("Error");
-return (EXIT_FAILURE);
+return (99);
 }
 
-return (EXIT_SUCCESS);
+return (0);
 }
 
