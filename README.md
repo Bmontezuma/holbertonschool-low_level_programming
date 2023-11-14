@@ -5,7 +5,7 @@
 [@Bmontezuma](https://github.com/Bmontezuma)
 ### Connect with Me
 
-[![Twitter](https://img.shields.io/twitter/follow/your_twitter_username?style=social)](https://twitter.com/BMontezuma01)
+[![Twitter](https://img.shields.io/twitter/follow/@BMontezuma01?style=social)](https://twitter.com/BMontezuma01)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-YourName-blue)](https://www.linkedin.com/feed/)
 
 
