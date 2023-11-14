@@ -5,7 +5,7 @@
 ### Connect with Me
 
 [![Twitter](https://img.shields.io/twitter/follow/BMontezuma01?style=social)](https://twitter.com/BMontezuma01)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-YourName-blue)](https://www.linkedin.com/feed/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Brandon Montezuma-blue)](https://www.linkedin.com/feed/)
 
 
 # HOLBERTON LOW LEVEL PROGRAMMING
