@@ -27,14 +27,20 @@ return (99);
 }
 
 while ((read_status = read(fd_from, buffer, sizeof(buffer))) > 0 &&
-(write_status = write(fd_to, buffer, read_status)) == read_status);
+ (write_status = write(fd_to, buffer, read_status)) == read_status);
+
+if (read_status == -1)
+{
+perror("Error");
+return (98);
+}
 
 close_status = close(fd_from) | close(fd_to);
 
 if (close_status == -1)
 {
 perror("Error");
-return (99);
+return (100);
 }
 
 return (0);
