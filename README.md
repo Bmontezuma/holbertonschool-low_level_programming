@@ -1,4 +1,4 @@
-![MyLogo](https://www.instagram.com/p/Czo6i5dR7ca/)
+![Borderlands 3](https://media3.giphy.com/media/mFZKWLoWj2woWrbRdQ/giphy.gif?cid=ecf05e479ialzj82z8j1d7mxoizbydje4yh4hn7e8h8qz8yp&ep=v1_gifs_search&rid=giphy.gif&ct=g)
 
 
 AUTHOR
