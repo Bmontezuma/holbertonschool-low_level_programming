@@ -3,6 +3,17 @@
 
 AUTHOR
 [@Bmontezuma](https://github.com/Bmontezuma)
+<SKILLS>
+  <summary>Click to expand</summary>
+  
+  UNREAL ENGINE 5
+  UNITY
+  BLENDER 	
+  GITHUB
+  MAYA
+  GAEA 
+</details>
+
 ### Connect with Me
 
 [![Twitter](https://img.shields.io/twitter/follow/BMontezuma01?style=social)](https://twitter.com/BMontezuma01)
