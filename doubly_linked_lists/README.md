@@ -31,13 +31,13 @@ AUTHOR
 # Doubly Linked List
 
 <RESOURCES>
-  <summary>Click to expand</summary>
+  <summary>RESOURCES</summary>
 
 https://intranet.hbtn.io/rltoken/4k13B5KYF6vxzGZpOn4lXQ
 </details>
 
 <GENERAL>
-  <summary>Click to expand</summary>
+  <summary>GENERAL</summary>
   
   - Allowed editors: vi, vim, emacs
   - All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
