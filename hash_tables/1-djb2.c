@@ -1,7 +1,7 @@
 #include <stdlib.h>
 
 /**
- * hash_djb2 - Hash function implementing the djb2 algorithm
+ * hash_djb2 - Hash function implementing algorithm
  * @str: The string to hash
  *
  * Return: The hash value for the given string
