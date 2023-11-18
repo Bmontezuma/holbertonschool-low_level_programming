@@ -1,5 +1,3 @@
-/* hash_table_set.c */
-
 #include "hash_tables.h"
 #include <stdlib.h>
 #include <string.h>
@@ -18,9 +16,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 
 	unsigned long int index;
+	hash_node_t *new_node;
+
 	index = key_index((const unsigned char *)key, ht->size);
 
-	hash_node_t *new_node = malloc(sizeof(hash_node_t));
+	new_node = malloc(sizeof(hash_node_t));
 
 	if (!new_node)
 		return (0);
@@ -41,4 +41,5 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 		return (1);
 }
+
 
