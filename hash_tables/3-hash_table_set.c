@@ -12,11 +12,11 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	if (!ht || !key || !*key)
-		return (0);
-
 	unsigned long int index;
 	hash_node_t *new_node;
+
+	if (!ht || !key || !*key)
+		return (0);
 
 	index = key_index((const unsigned char *)key, ht->size);
 
@@ -41,5 +41,4 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 		return (1);
 }
-
 
