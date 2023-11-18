@@ -1,6 +1,7 @@
 #include "hash_tables.h"
 #include <string.h>
 #include <stdlib.h>
+
 /**
  * hash_table_get - Retrieve the value associated with key.
  * @ht: The hash table
@@ -13,7 +14,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	unsigned long int index;
 	hash_node_t *current;
 
-	if (ht || NULL || key == NULL || *key == '\0')
+	if (ht == NULL || key == NULL || *key == '\0')
 		return (NULL);
 
 	index = hash_djb2((unsigned char *)key) % ht->size;
@@ -21,9 +22,11 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 
 	while (current != NULL)
 	{
-		if (strcmp(current->key, key) == 0)
-			return (current->value);
-		current = current->next;
+	if (strcmp(current->key, key) == 0)
+		return (current->value);
+	current = current->next;
 	}
-		return (NULL);
+
+	return (NULL);
 }
+
