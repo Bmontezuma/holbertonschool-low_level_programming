@@ -1,5 +1,3 @@
-/* key_index.c */
-
 #include "hash_tables.h"
 
 /**
