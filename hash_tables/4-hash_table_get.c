@@ -6,21 +6,23 @@
  * @ht: The hash table you want to look into.
  * @key: The key you are looking for.
  *
- * Return: The value associated with the key..
+ * Return: The value associated with the key.
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-if (!ht || !key || *key == '\0')
-return (NULL);
+	if (!ht || !key || *key == '\0')
+		return (NULL);
 
-unsigned long int index = key_index((const unsigned char *)key, ht->size);
-if (index >= ht->size)
-return (NULL);
+	unsigned long int index;
+	hash_node_t *node;
 
-hash_node_t *node = ht->array[index];
-while (node && strcmp(node->key, key))
-node = node->next;
+	index = key_index((const unsigned char *)key, ht->size);
+	if (index >= ht->size)
+		return (NULL);
 
-return (node ? node->value : NULL);
+	node = ht->array[index];
+	while (node && strcmp(node->key, key))
+		node = node->next;
+
+		return (node ? node->value : NULL);
 }
-
