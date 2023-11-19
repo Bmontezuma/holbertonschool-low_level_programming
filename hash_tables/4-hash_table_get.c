@@ -3,8 +3,8 @@
 
 /**
  * hash_table_get - Retrieves a value associated with a key.
- * @ht: The hash table.
- * @key: The key string.
+ * @ht: The hash table you want to look into.
+ * @key: The key you are looking for.
  *
  * Return: The value associated with the key..
  */
@@ -28,3 +28,4 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 
 	return (NULL);
 }
+
