@@ -1,6 +1,6 @@
 #include "hash_tables.h"
-#include <stddef.h>
 #include <stdio.h>
+
 void hash_table_print(const hash_table_t *ht)
 {
 if (ht == NULL)
