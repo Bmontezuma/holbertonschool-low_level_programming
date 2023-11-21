@@ -17,25 +17,16 @@ Linux systems, C, Python, C++, Unreal Engine 5.3, Blender, Photoshop, Unity.
 
 This is all projects given at Holberton that required coding in several different coding languages.
 
-<details>
-<summary>Git</summary>
-
-[Project 1 Link](https://github.com/Bmontezuma/holbertonschool-zero_day/tree/master/git)
-</details>
-
-<details>
-<summary>holbertonschool-shell</summary>
-
-[Project 2 Link](https://github.com/Bmontezuma/holbertonschool-shell)
-</details>
-
-<details>
-<summary>holbertonschool-low_leve_programming</summary>
-
-[Project 3 Link](https://github.com/Bmontezuma/holbertonschool-low_level_programming)
-</details>
-
-
+- Holberton School Zero Day
+  - Git
+    - [Bash](https://github.com/Bmontezuma/holbertonschool-zero_day/tree/master/git/bash)
+    - [C](https://github.com/Bmontezuma/holbertonschool-zero_day/tree/master/git/c)
+    - [JS](https://github.com/Bmontezuma/holbertonschool-zero_day/tree/master/git/js)
+    - [README.md](https://github.com/Bmontezuma/holbertonschool-zero_day/blob/master/git/README.md)
+  - Holberton School Shell
+    - [Link 2.1](#link-21)
+    - [Link 2.2](#link-22)
+  
 ### Connect with Me
 
 [![Twitter](https://img.shields.io/twitter/follow/BMontezuma01?style=social)](https://twitter.com/BMontezuma01)
